@@ -9,11 +9,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
+    @IBOutlet var RockPaperScissors: [UIImageView]!
+   
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
     }
 
-
+    @IBOutlet weak var myChoice: UIImageView!
+    
+    @IBAction func tapGesture(_ sender: Any)
+    {
+        var randomnumber = Int.random(in: 0...2)
+        //var rock =
+        myChoice.image = UIImage (named: "rock")
+    }
+    
 }
 
