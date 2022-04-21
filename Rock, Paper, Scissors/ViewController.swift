@@ -17,16 +17,54 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        
+        
     }
-
+ var userChoice = 0
     @IBOutlet weak var myChoice: UIImageView!
     
+    @IBOutlet weak var winnerLabel: UILabel!
+    @IBOutlet var stackView: UIView!
+    
+    @IBOutlet weak var robotChoice: UIImageView!
     @IBAction func tapGesture(_ sender: Any)
     {
         var randomnumber = Int.random(in: 0...2)
         //var rock =
-        myChoice.image = UIImage (named: "rock")
+        switch randomnumber{
+            
+        case 0:  robotChoice.image = UIImage (named: "rock")
+        case 1: robotChoice.image = UIImage (named:"paper")
+            
+        case 2: robotChoice.image = UIImage (named:"scissors")
+        default:  robotChoice.image = UIImage (named:"")
+          
+        }
+        
+        let selectedPoint = ((sender as! AnyObject).location(in: stackView))
+        
+    
+        for label in RockPaperScissors
+        {
+        if  label.frame.contains(selectedPoint)
+            { userChoice = label.tag
+            switch userChoice {
+                
+            case 0:  myChoice.image = UIImage (named: "rock")
+            case 1: myChoice.image = UIImage (named:"paper")
+                
+            case 2: myChoice.image = UIImage (named:"scissors")
+            default:  myChoice.image = UIImage (named:"")
+              
+        }
+        }
+           
+            if  userChoice == randomnumber {
+                winnerLabel.text = "tie"
+           
+            }
     }
     
 }
 
+}

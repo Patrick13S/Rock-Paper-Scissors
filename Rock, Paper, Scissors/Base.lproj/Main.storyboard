@@ -43,6 +43,17 @@
                                 <rect key="frame" x="87" y="281" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oth-H4-9WG">
+                                <rect key="frame" x="87" y="437" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZU-2q-txo">
+                                <rect key="frame" x="116" y="573" width="183" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -54,6 +65,9 @@
                     </view>
                     <connections>
                         <outlet property="myChoice" destination="ZKD-gW-fpm" id="pey-IC-kjX"/>
+                        <outlet property="robotChoice" destination="Oth-H4-9WG" id="j2E-Vd-GyS"/>
+                        <outlet property="stackView" destination="8bC-Xf-vdC" id="jSd-R8-uOy"/>
+                        <outlet property="winnerLabel" destination="IZU-2q-txo" id="r4Z-gT-C2b"/>
                         <outletCollection property="RockPaperScissors" destination="3Wd-sw-rSE" collectionClass="NSMutableArray" id="7yk-05-tyz"/>
                         <outletCollection property="RockPaperScissors" destination="Pyu-cr-fKW" collectionClass="NSMutableArray" id="6vC-2r-3gj"/>
                         <outletCollection property="RockPaperScissors" destination="xuJ-0o-5UF" collectionClass="NSMutableArray" id="Bce-V4-Cb8"/>
