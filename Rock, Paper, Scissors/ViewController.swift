@@ -61,8 +61,30 @@ class ViewController: UIViewController {
            
             if  userChoice == randomnumber {
                 winnerLabel.text = "tie"
-           
+    
             }
+            
+            if userChoice == 0 && randomnumber == 2 {
+                winnerLabel.text = "you win!"
+            }
+            
+            if userChoice == 1 && randomnumber == 0 {
+                winnerLabel.text = "you win!"
+            }
+            if userChoice == 2 && randomnumber == 1 {
+                winnerLabel.text = "you win!"
+            }
+            if userChoice == 0 && randomnumber == 1 {
+                winnerLabel.text = "you lose."
+            }
+            if userChoice == 1 && randomnumber == 2 {
+                winnerLabel.text = "you lose."
+            }
+            if userChoice == 2 && randomnumber == 0 {
+                winnerLabel.text = "you lose."
+            }
+
+            
     }
     
 }
